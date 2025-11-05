@@ -43,6 +43,24 @@ body {
     font-size: 25px;
     font-weight: lighter;
 }
+	.today-box {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #030452;
+}
+
+.today-box h2 {
+  color: #030452;
+  margin-bottom: 15px;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 .menu-images {
     display: flex;
     justify-content: center;
@@ -255,10 +273,12 @@ wrapper {
     </div>
   </div>
   <div class="button-container"> <a href="#favorites" class="button">Our Favorites</a> <a href="#menu" class="button">View Menu</a> <a href="#story" class="button">Our Story</a> </div>
+  <div class="today-box">
   <h2>Today's Catch</h2>
-  <p><img src="mahi.webp"  width="350" height="250" alt=""/></p>
-  <h3>Grilled mahi-mahi with mango salsa </h3>
+  <img src="mahi.webp" width="350" height="250" alt="Grilled mahi-mahi">
+  <h3>Grilled Mahi-Mahi with Mango Salsa</h3>
   <p><strong>$19.99</strong></p>
+</div>
   <h2 id="favorites"> Our Favorites</h2>
   <div class="menu-images">
     <div  class="menu-item"> <img src="grilledsalmon.jpg"  alt="Grilled Salmon">
