@@ -43,7 +43,7 @@ body {
     font-weight: lighter;
 }
 .today-box {
-    max-width: 400px;
+    max-width: 500px;
     margin: 30px auto;
     padding: 15px;
     background-color: rgba(255,255,255,0.3);
@@ -62,8 +62,7 @@ body {
 .today-box img {
     border-radius: 15px;
     max-width: 70%;
-    height: auto;
-   /* box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);*/
+    height: auto; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 .menu-images {
     display: flex;
@@ -74,6 +73,7 @@ body {
     gap: 20px;
 }
 .menu-item {
+	max-width: 500px;
     text-align: center;
     background-color: rgba(255,255,255,0.3);
     padding: 10px;
@@ -82,15 +82,15 @@ body {
 }
 .menu-images img {
     width: 100%;
-    max-width: 250px;
+    max-width: 380px;
     border-radius: 10px;
     border: 3px solid rgba(0,0,0,0.7);
-    height: 320px;
+    height: 350x;
     object-fit: cover;
     border-radius: 10px;
 }
 .menu-box {
-    max-width: 600px;
+    max-width: 500px;
     margin: 40px auto;
     padding: 25px;
     background-color: rgba(255, 255, 255, 0.3);
@@ -114,7 +114,7 @@ body {
     margin: 0 0 15px 0;
     color: #030452;
 }
-.menu-content h3:not(:first-child) {
+.menu-content h3 {
     border-top: 1px solid rgba(3, 4, 82, 0.2);
     padding-top: 10px;
     margin-top: 20px;
@@ -199,11 +199,11 @@ wrapper {
 .button-container {
     flex-direction: column;
     align-items: center;
-	}
+}
 .menu-images {
     flex-direction: column;
     align-items: center;
-   gap:25px;
+    gap: 25px;
 }
 .menu-item {
     width: 90%;
@@ -216,7 +216,7 @@ wrapper {
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    color: #030452; /* same as the rest of site */
+    color: #030452;
 }
 .info-box h2 {
     color: #030452;
