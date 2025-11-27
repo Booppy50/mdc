@@ -1,0 +1,337 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Joker: Folie à Deux</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('joker2.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: #f5f5f5;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(0,255,200,0.12) 0%, transparent 40%), rgba(0, 0, 0, 0.55);
+    z-index: -1;
+    pointer-events: none;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.button {
+    background:rgba(71,114,107,1.00);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 16px;
+    font-family: "Grandstander", cursive;
+    font-optical-sizing: auto;
+font-weight: <weight>;
+    font-style: normal;
+}
+.button:hover .button.active {
+    background-color: #48cae4;
+}
+	
+.page {
+    min-height: 200vh;
+    padding: 60px 8vw 40px;
+    box-sizing: border-box;
+}
+
+
+.joker-text {
+    position: relative;
+    font-family: 'League Gothic', 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-weight: 700;
+    background: linear-gradient(90deg, #6ff3ca, #c1ffee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: contrast(108%) brightness(92%);
+    text-shadow: 
+        0 0 1px rgba(150,255,230,0.2),
+        0 0 8px rgba(0,0,0,0.6),
+        0 0 22px rgba(0,0,0,0.9);
+}
+
+.joker-text::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('joker_texture_scratches.png'); 
+    mix-blend-mode: overlay;
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.title-block {
+    text-align: center;
+    margin-top: 8vh;
+    margin-bottom: 12vh;
+}
+
+.names {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.main-title {
+    margin: 12px 0 10px;
+    font-size: clamp(46px, 7vw, 85px);
+    line-height: 1.1;
+}
+
+.tagline-style {
+    font-size: 15px;
+    margin-top: 6px;
+    opacity: 0.85;
+}
+
+
+.split {
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 80px;
+}
+
+.side {
+    flex: 1;
+    padding: 25px 25px 30px;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    backdrop-filter: blur(2px);
+}
+
+.side h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 20px;
+}
+
+.side.joker h2 {
+    color: #6ef5c7;
+}
+
+.side.harley h2 {
+    color: #ff6fa5;
+}
+
+.side p {
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.cast-section {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 120px;
+}
+
+.cast-title {
+    font-size: 34px;
+    margin-bottom: 40px;
+}
+
+.cast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 28px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.actor {
+    background: rgba(0,0,0,0.55);
+    padding: 20px 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 14px rgba(0,0,0,0.65);
+}
+
+.actor-name {
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+.actor-role {
+    font-size: 14px;
+    opacity: 0.75;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.trailer-section {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 100px;
+}
+
+.trailer-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* DARK CINEMA BACKGROUND FOR TRAILER */
+.trailer-box {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.55);
+    border-radius: 10px;
+    box-shadow: 0 0 22px rgba(0,0,0,0.75);
+}
+
+/* RESPONSIVE — MOBILE FIX */
+.trailer-box iframe {
+    max-width: 100%;
+    width: 560px;
+    height: 315px;
+    border-radius: 8px;
+}
+
+.credits {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    text-align: center;
+    opacity: 0.8;
+    margin-top: 500px;
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+.fade-in.delay {
+    animation-delay: 0.7s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 800px) {
+    .page {
+        padding: 40px 6vw 30px;
+    }
+    .split {
+        flex-direction: column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="page">
+	
+
+<div id="home" class="home">
+    
+    <div class="title-block fade-in">
+        <div class="names joker-text">PHOENIX &nbsp;&nbsp;&nbsp; GAGA</div>
+
+        <h1 class="joker-text main-title">JOKER<br>FOLIE À DEUX</h1>
+
+        <div class="tagline-style joker-text">THE WORLD IS A STAGE</div>
+    </div>
+<div class="button-container"> <a href="#home" class="button">Home</a> <a href="#trailer" class="button">Trailer</a> <a href="#cast" class="button">Cast</a> <a href="#about" class="button">About</a></div>
+    <div class="split fade-in delay">
+        <div class="side joker">
+            <h2>Joker</h2>
+            <p>A mind slipping further into chaos, performed with a smile that never quite reaches the eyes. Obsession, applause, and violence blur as the city becomes his stage.</p>
+        </div>
+        <div class="side harley">
+            <h2>Harley</h2>
+            <p>A voice that once tried to heal now sings along with the madness. Love, delusion, and danger twist together in a dance that no one can control.</p>
+        </div>
+    </div>
+	<div id="trailer" class="trailer-section fade-in">
+    <h2 class="joker-text trailer-title">TRAILER</h2>
+    
+    <div class="trailer-box">
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/_OKAwz2MsJs?si=Izp0VOAXaT3lH3o6"
+        title="YouTube video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+        </iframe>
+    </div>
+</div>
+<div id="cast" class="cast-section fade-in">
+    <h2 class="joker-text cast-title">CAST</h2>
+
+    <div class="cast-grid">
+        <div class="actor">
+            <div class="actor-name">Joaquin Phoenix</div>
+            <div class="actor-role">Arthur Fleck / Joker</div>
+        </div>
+        <div class="actor">
+            <div class="actor-name">Lady Gaga</div>
+            <div class="actor-role">Harley Quinn</div>
+        </div>
+        <div class="actor">
+            <div class="actor-name">Zazie Beetz</div>
+            <div class="actor-role">Sophie Dumond</div>
+        </div>
+        <div class="actor">
+            <div class="actor-name">Brendan Gleeson</div>
+            <div class="actor-role">???</div>
+        </div>
+        <div class="actor">
+            <div class="actor-name">Catherine Keener</div>
+            <div class="actor-role">???</div>
+        </div>
+    </div>
+</div>
+
+    <div class="credits fade-in delay">
+        A WARNER BROS. PICTURE · DC · JOKER: FOLIE À DEUX · ONLY IN CINEMAS
+    </div>
+
+    <footer>
+        <p>© 2025, Angelina Villalobos. This is a fictitious web page created solely for education and training.
+        All products and people associated with this web page are also fictitious.
+        Any resemblance to real brands or people is purely coincidental.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
