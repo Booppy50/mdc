@@ -207,30 +207,30 @@ padding-right: 20px:
     font-weight: 400;
     font-style: normal;
 }
-.trailer-section {
-    text-align: center;
-    margin-top: 120px;
-    margin-bottom: 100px;
-}
-.trailer-title {
-    font-size: 32px;
-    margin-bottom: 25px;
-    font-family: "Nosifer", sans-serif;
-}
-.trailer-box {
+.trailer-wrapper {
     display: flex;
     justify-content: center;
-    padding: 10px;
-    background: rgba(26,39,37,.55);
-    border-radius: 10px;
-    box-shadow: 0 0 22px rgba(0,0,0,0.75);
 }
-.trailer-box iframe {
-    max-width: 100%;
-    width: 650px;
-    height: 375;
-    border-radius: 8px;
+
+.trailer-frame {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,.85);
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
 }
+
+.trailer-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .credits {
     font-size: 10px;
     text-transform: uppercase;
@@ -344,11 +344,15 @@ font-size: 28px;
       "Joker: Folie à Deux" is a musical sequel to the 2019 film "Joker," directed by Todd Phillips. The movie stars Joaquin Phoenix as the Joker and Lady Gaga as Harley Quinn, exploring their complex relationship and the dark themes of the characters. The film is set in 1980s Gotham City and delves into the Joker's psyche, showcasing a blend of music, song, and dance that reflects the character's twisted personality. The sequel has been met with mixed reviews, with some critics praising the musical elements and others criticizing the film for its portrayal of the Joker. Despite the mixed reception, the film has garnered attention for its unique approach to the character and the musical genre. </p>
   </div>
   <div id="trailer" class="trailer-section fade-in">
-    <h2 class="joker-text trailer-title">TRAILER</h2>
-    <div class="trailer-box">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/_OKAwz2MsJs?si=eYJTZYx9MuZSWnKB&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <h2 class="joker-text trailer-title">WATCH THE TRAILER</h2>
+
+  <div class="trailer-wrapper">
+    <div class="trailer-frame">
+      <iframe src="https://www.youtube.com/embed/_OKAwz2MsJs?si=eYJTZYx9MuZSWnKB&amp;controls=1" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
+</div>
+
   <div id="cast" class="cast-section fade-in">
     <h2 class="joker-text cast-title">CAST</h2>
     <div class="cast-grid">
