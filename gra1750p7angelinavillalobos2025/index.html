@@ -2,9 +2,12 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nosifer&family=League+Gothic&display=swap" rel="stylesheet">
+
+<!-- Adobe font -->
 <link rel="stylesheet" href="https://use.typekit.net/gli7nfe.css">
 <style>
 body {
@@ -18,7 +21,7 @@ body {
     font-family: Arial, sans-serif;
     color: #f5f5f5;
     position: relative;
-    cursor: url('cursor1.png') 16 16, auto;
+    animation: bgMove 12s ease-in-out infinite, bgZoom 18s ease-in-out infinite;
 }
 body::before {
     content: "";
@@ -28,7 +31,6 @@ body::before {
     z-index: -1;
     pointer-events: none;
 }
-
 .button-container {
     display: flex;
     justify-content: center;
@@ -54,7 +56,7 @@ body::before {
     background-color: #48cae4;
 }
 .page {
-    min-height: 200vh;
+    min-height: 100vh;
     padding: 60px 8vw 40px;
     box-sizing: border-box;
 }
@@ -106,7 +108,7 @@ body::before {
 .side {
     flex: 1;
     padding: 25px 25px 30px;
-    background: rgba(26,39,37,.55)rgba(0, 0, 0, 0.55);
+    background: rgba(26,39,37,.55), rgba(0, 0, 0, 0.55);
     border-radius: 10px;
     box-shadow: 0 0 30px rgba(0,0,0,0.7);
     backdrop-filter: blur(2px);
@@ -182,7 +184,7 @@ padding-right: 20px:
     margin: auto;
 }
 .actor {
-    background: rgba(26,39,37,.55));
+    background: rgba(26,39,37,.55);
     padding: 20px 10px;
     border-radius: 8px;
     box-shadow: 0 0 14px rgba(0,0,0,0.65);
@@ -218,15 +220,15 @@ padding-right: 20px:
 .trailer-box {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
     background: rgba(26,39,37,.55);
     border-radius: 10px;
     box-shadow: 0 0 22px rgba(0,0,0,0.75);
 }
 .trailer-box iframe {
     max-width: 100%;
-    width: 560px;
-    height: 315px;
+    width: 650px;
+    height: auto;
     border-radius: 8px;
 }
 .credits {
@@ -253,9 +255,6 @@ footer {
 }
 .fade-in.delay {
     animation-delay: 0.7s;
-}
-body {
-    animation: bgMove 12s ease-in-out infinite, bgZoom 18s ease-in-out infinite;
 }
 * {
     cursor: url('cursor1.png') 16 16, auto !important;
@@ -304,54 +303,24 @@ transform: translateY(0);
 .split {
     flex-direction: column;
 }
+body {
+    background-size: 90% auto !important;
+    background-image: url('JokerOIp2.jpg') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center top !important;
+    background-attachment: scroll !important;
 }
-	@media (max-width: 700px) {
-    body {
-		    background-size: 90% auto !important;
-        background-image: url('JokerOIp2.jpg') !important;
-        background-size: cover !important;
-        background-repeat: no-repeat !important;
-        background-position: center top !important;
-        background-attachment: scroll !important;
-    }
 }
-
-.about-title1 {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 28px;
-}
-.about-title2 {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 28px;
-}
-.about-title3 {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 28px;
-}
-.about-title4 {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 28px;
-}
-.about-title21 {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 28px;
-}
+display: flex;
+align-items: center;
+gap: 15px;
+font-size: 28px;
 </style>
 </head>
 
 <body>
 <div class="page">
-<div id="home" class="home">
   <div class="title-block fade-in">
     <div class="names joker-text">PHOENIX &nbsp;&nbsp;&nbsp; GAGA</div>
     <h1 class="joker-text main-title">JOKER<br>
@@ -405,7 +374,6 @@ transform: translateY(0);
       </div>
     </div>
   </div>
-	 
   <div class="credits fade-in delay"> A WARNER BROS. PICTURE · DC · JOKER: FOLIE À DEUX · ONLY IN CINEMAS </div>
   <footer>
     <p>© 2025, Angelina Villalobos. This is a fictitious web page created solely for education and training.
