@@ -1,0 +1,410 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nosifer&family=League+Gothic&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/gli7nfe.css">
+
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('joker2.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: #f5f5f5;
+    position: relative;
+
+    cursor: url('cursor1.png') 16 16, auto;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(0,255,200,0.12) 0%, transparent 40%), rgba(0, 0, 0, 0.55);
+    z-index: -1;
+    pointer-events: none;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.button {
+    background: rgba(71,114,107,1.00);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+	
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style:oblique;
+	filter: contrast(108%) brightness(92%);
+	 text-shadow: 0 0 1px rgba(150,255,230,0.2), 0 0 8px rgba(0,0,0,0.6), 0 0 22px rgba(0,0,0,0.9);
+ 
+	}
+.button:hover .button.active {
+    background-color: #48cae4;
+}
+
+.page {
+    min-height: 200vh;
+    padding: 60px 8vw 40px;
+    box-sizing: border-box;
+}
+.joker-text {
+    position: relative;
+    font-family: 'League Gothic', 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-weight: 700;
+    background: linear-gradient(90deg, #6ff3ca, #c1ffee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: contrast(108%) brightness(92%);
+    text-shadow: 0 0 1px rgba(150,255,230,0.2), 0 0 8px rgba(0,0,0,0.6), 0 0 22px rgba(0,0,0,0.9);
+}
+.joker-text::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('joker_texture_scratches.png');
+    mix-blend-mode: overlay;
+    opacity: 0.25;
+    pointer-events: none;
+}
+.title-block {
+    text-align: center;
+    margin-top: 8vh;
+    margin-bottom: 12vh;
+}
+.names {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.main-title {
+    margin: 12px 0 10px;
+    font-size: clamp(46px, 7vw, 85px);
+    line-height: 1.1;
+}
+.tagline-style {
+    font-size: 15px;
+    margin-top: 6px;
+    opacity: 0.85;
+}
+.split {
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 80px;
+}
+.side {
+    flex: 1;
+    padding: 25px 25px 30px;
+    background: rgba(26,39,37,.55)rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    backdrop-filter: blur(2px);
+}
+.side h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 20px;
+}
+.side.joker h2 {
+    color: #6ef5c7;
+}
+	.side.joker {
+    position: relative;
+    background: 
+        linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)),
+        url('https://media3.giphy.com/media/MCcBepTJoDZcY/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.side.harley h2 {
+    color: #ff6fa5;
+}
+.side.harley {
+    position: relative;
+    background: 
+        linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)),
+        url('https://media3.giphy.com/media/bpyz1kss8x1ho0wUAw/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+	
+.side p {
+    line-height: 1.5;
+    font-size: 15px;
+}
+.about {
+    flex: 1;
+    padding: 25px 25px 30px;
+    background:rgba(26,39,37,.55);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px);
+}
+	.about-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 28px;
+     font-family: "Nosifer", sans-serif;
+color:rgba(85,164,140,1.00);
+}
+
+.about-gif {
+    width: 60px;
+    height: auto;
+    border-radius: 6px;
+	padding-left: 20px;
+	padding-right: 20px:
+}
+
+.cast-section {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 120px;
+}
+.cast-title {
+    font-size: 34px;
+    margin-bottom: 40px;
+ font-family: "Nosifer", sans-serif;	
+}
+.cast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 28px;
+    max-width: 900px;
+    margin: auto;
+}
+.actor {
+    background: rgba(26,39,37,.55));
+    padding: 20px 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 14px rgba(0,0,0,0.65);
+}
+.actor-name {
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+	font-family: "delittle-chromatic", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+.actor-role {
+    font-size: 14px;
+    opacity: 0.75;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+	font-family: "delittle-chromatic", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+.trailer-section {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 100px;
+}
+.trailer-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+	 font-family: "Nosifer", sans-serif;
+}
+.trailer-box {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(26,39,37,.55);
+    border-radius: 10px;
+    box-shadow: 0 0 22px rgba(0,0,0,0.75);
+}
+.trailer-box iframe {
+    max-width: 100%;
+    width: 560px;
+    height: 315px;
+    border-radius: 8px;
+}
+.credits {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    text-align: center;
+    opacity: 0.8;
+    margin-top: 30px;
+}
+footer {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 10px;
+    color: rgba(138,192,183,1.00);
+    text-align: center;
+    padding: 20px;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeInUp 1.5s ease forwards;
+    font-size: 12px;
+}
+.fade-in.delay {
+    animation-delay: 0.7s;
+}
+body {
+    animation: bgMove 12s ease-in-out infinite, bgZoom 18s ease-in-out infinite;
+}
+	* {
+    cursor: url('cursor1.png') 16 16, auto !important;
+}
+
+@keyframes bgMove {
+0% {
+background-position: center;
+}
+50% {
+background-position: center 18px;
+}
+100% {
+background-position: center;
+}
+}
+@keyframes bgZoom {
+0% {
+background-size: 100%;
+}
+50% {
+background-size: 108%;
+}
+100% {
+background-size: 100%;
+}
+}
+@keyframes fadeInUp {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@media (max-width: 800px) {
+.page {
+    padding: 40px 6vw 30px;
+}
+.split {
+    flex-direction: column;
+}
+}
+.about-title1 {    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 28px;
+}
+.about-title2 {    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 28px;
+}
+.about-title3 {    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 28px;
+}
+.about-title4 {    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 28px;
+}
+.about-title21 {display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 28px;
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div id="home" class="home">
+  <div class="title-block fade-in">
+    <div class="names joker-text">PHOENIX &nbsp;&nbsp;&nbsp; GAGA</div>
+    <h1 class="joker-text main-title">JOKER<br>
+      FOLIE À DEUX</h1>
+    <div class="tagline-style joker-text">THE WORLD IS A STAGE</div>
+  </div>
+  <div class="button-container"> <a href="#home" class="button">Home</a> <a href="#trailer" class="button">Trailer</a> <a href="#cast" class="button">Cast</a> <a href="#about" class="button">About</a></div>
+  <div class="split fade-in delay">
+    <div class="side joker">
+  <h2>Joker</h2>
+
+  
+
+      <p>A mind slipping further into chaos, performed with a smile that never quite reaches the eyes. Obsession, applause, and violence blur as the city becomes his stage.</p>
+    </div>
+    <div class="side harley">
+      <h2>Harley</h2>
+      <p>A voice that once tried to heal now sings along with the madness. Love, delusion, and danger twist together in a dance that no one can control.</p>
+    </div>
+  </div>
+  <div id="about" class="about">
+    <h2 class="about-title">
+    <span class="about-title3"><img src="jokerg2.gif" class="about-gif"></span> <span style="text-align: center">About</span><span class="about-title4"><span class="about-title21">  <img src="jokerg2.gif" class="about-gif"></span></span></h2>
+
+    <p>PHOENIX GAGA JOKER FOLIE À DEUX THE WORLD IS A STAGE
+      "Joker: Folie à Deux" is a musical sequel to the 2019 film "Joker," directed by Todd Phillips. The movie stars Joaquin Phoenix as the Joker and Lady Gaga as Harley Quinn, exploring their complex relationship and the dark themes of the characters. The film is set in 1980s Gotham City and delves into the Joker's psyche, showcasing a blend of music, song, and dance that reflects the character's twisted personality. The sequel has been met with mixed reviews, with some critics praising the musical elements and others criticizing the film for its portrayal of the Joker. Despite the mixed reception, the film has garnered attention for its unique approach to the character and the musical genre. </p>
+  </div>
+  <div id="trailer" class="trailer-section fade-in">
+    <h2 class="joker-text trailer-title">TRAILER</h2>
+    <div class="trailer-box">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_OKAwz2MsJs?si=eYJTZYx9MuZSWnKB&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div id="cast" class="cast-section fade-in">
+    <h2 class="joker-text cast-title">CAST</h2>
+    <div class="cast-grid">
+      <div class="actor">
+        <div class="actor-name">Joaquin Phoenix</div>
+        <div class="actor-role">Arthur Fleck / Joker</div>
+      </div>
+      <div class="actor">
+        <div class="actor-name">Lady Gaga</div>
+        <div class="actor-role">Harley Quinn</div>
+      </div>
+      <div class="actor">
+        <div class="actor-name">Zazie Beetz</div>
+        <div class="actor-role">Sophie Dumond</div>
+      </div>
+      <div class="actor">
+        <div class="actor-name">Brendan Gleeson</div>
+        <div class="actor-role">???</div>
+      </div>
+      <div class="actor">
+        <div class="actor-name">Catherine Keener</div>
+        <div class="actor-role">???</div>
+      </div>
+    </div>
+  </div>
+  <div class="credits fade-in delay"> A WARNER BROS. PICTURE · DC · JOKER: FOLIE À DEUX · ONLY IN CINEMAS </div>
+  <footer>
+    <p>© 2025, Angelina Villalobos. This is a fictitious web page created solely for education and training.
+      All products and people associated with this web page are also fictitious.
+      Any resemblance to real brands or people is purely coincidental.</p>
+  </footer>
+</div>
+</body>
+</html>
