@@ -6,11 +6,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nosifer&family=League+Gothic&display=swap" rel="stylesheet">
-
-
 <link rel="stylesheet" href="https://use.typekit.net/gli7nfe.css">
 <style>
-	
 body {
     margin: 0;
     min-height: 100vh;
@@ -253,7 +250,6 @@ body::before {
     text-align: center;
     padding: 20px;
 }
-
 .fade-in {
     opacity: 0;
     transform: translateY(25px);
@@ -268,21 +264,22 @@ body::before {
 }
 
 @media (max-width: 800px) {
-  body {
-      overflow: hidden;
-  }
-  body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image: url('joker2.webp');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: -2;
-  }
+body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
 }
-
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('joker2.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    
+}
+}
 @keyframes bgMove {
 0% {
 background-position: center;
@@ -311,7 +308,6 @@ opacity: 1;
 transform: translateY(0);
 }
 }
-
 @media (max-width: 800px) {
 .page {
     padding: 40px 6vw 30px;
@@ -324,7 +320,6 @@ transform: translateY(0);
 max-width: 94%;
 }
 }
-
 </style>
 </head>
 
