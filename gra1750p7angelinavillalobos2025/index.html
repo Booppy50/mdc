@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nosifer&family=League+Gothic&display=swap" rel="stylesheet">
 
-<!-- Adobe font -->
+
 <link rel="stylesheet" href="https://use.typekit.net/gli7nfe.css">
 <style>
 	
@@ -269,9 +269,17 @@ body::before {
 
 @media (max-width: 800px) {
   body {
-      background-attachment: scroll !important;
-      background-size: cover !important;
-      background-position: center !important;
+      overflow: hidden;
+  }
+  body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url('joker2.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -2;
   }
 }
 
@@ -316,7 +324,7 @@ transform: translateY(0);
 max-width: 94%;
 }
 }
-}
+
 </style>
 </head>
 
