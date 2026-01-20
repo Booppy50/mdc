@@ -1,0 +1,416 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Welcome to Viva Mexico | Angelina Villalobos 2026</title>
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(mexbackg.jpg) no-repeat center center;
+    background-size: cover;
+    opacity: 0.75;
+    z-index: -1;
+}
+header {
+    background-color: #381701;
+    width: 960px;
+    height: 120px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+.logo {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    margin-left: -30px;
+}
+.header-text h1 {
+    margin: 0;
+    font-size: 35px;
+    color: rgba(240,166,46,1.00);
+    text-transform: uppercase;
+    margin-left: 100px;
+}
+.header-text p {
+    margin: 5px 0 0 0;
+    font-size: 22px;
+    color: rgba(240,166,46,1.00);
+    margin-left: 30px;
+}
+.nav-buttons {
+    list-style: none;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: center;
+}
+.nav-buttons li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.nav-buttons a {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #381701;
+    color: rgba(240,166,46,1.00);
+    text-decoration: none;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.nav-buttons a:hover {
+    background-color: #5a2603;
+    transform: scale(1.05);
+}
+wrapper {
+    margin: 0 auto;
+    width: 960px;
+    display: block;
+    background-color: rgba(248,241,177,0.32);
+    height: 1000px;
+    color: rgba(131,42,4,1.00);
+}
+#hero {
+}
+.intro {
+    color: rgba(246,236,236,1.00);
+}
+.maincontent {
+}
+body, td, th {
+    color: rgba(232,124,26,1.00);
+}
+footer {
+    margin: 0 auto;
+    padding-left: 20px;
+    text-align: center;
+    color: rgba(240,166,46,1.00);
+    padding-top: 50px;
+    max-height: 100px;
+    width: 920px;
+    background-color: rgba(40,16,0,0.65);
+    padding: 16px;
+    text-align: center;
+    font-size: xx-small;
+}
+#hero h2 {
+    color: rgba(111,1,4,1.00);
+    padding-left: 75px;
+}
+.intro p {
+    color: rgba(111,1,4,1.00);
+    width: 910px;
+    padding-left: 30px;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.menu-item h2 {
+    text-align: center;
+    margin: 20px auto 10px;
+    color: rgba(111,1,4,1.00);
+    font-size: 28px;
+}
+.menu-images {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.menu-card {
+    width: 255px;
+    background-color: rgba(245,235,162,0.35);
+    border-radius: 18px;
+    padding: 16px;
+    text-align: center;
+}
+.menu-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto 12px;
+}
+.menu-card h3 {
+    margin: 10px 0 8px;
+    color: rgba(111,1,4,1.00);
+}
+.menu-card p {
+    margin: 0;
+    color: rgba(111,1,4,1.00);
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.3;
+}
+.menu-card .price {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.events-box {
+    width: 900px;
+    max-width: 95%;
+}
+.events-inner {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.event-item {
+    width: 45%;
+    text-align: center;
+}
+.event-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 600px) {
+.events-inner {
+    flex-direction: column;
+}
+.event-item {
+    width: 100%;
+}
+}
+info-box {
+    max-width: 550px;
+    background: rgba(255,255,255,0.3);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px auto;
+}
+
+@media (max-width: 1024px) {
+body::before {
+    position: absolute;
+}
+}
+header, wrapper {
+    width: 100%;
+    max-width: 960px;
+}
+.info-box {
+    
+    
+    text-align: center;
+    
+}
+.info-box h2 {
+    color: #030452;
+    margin-bottom: 15px;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.map-container iframe {
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+.hours p {
+    margin: 5px 0;
+    font-size: 15px;
+}
+.social-media {
+    margin: 30px auto;
+    text-align: center;
+    color: #030452;
+}
+.social-media h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.social-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,109,202,0.5);
+}
+	
+@media (max-width: 768px){
+
+  header{
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .header-inner{
+    padding-left: 15px;
+    gap: 10px;
+  }
+
+  .logo{
+    width: 120px;
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  .header-text h1{
+    font-size: 24px;
+    margin-left: 0;      /* remove the big left push */
+  }
+
+  .header-text p{
+    font-size: 16px;
+    margin-left: 0;      /* remove the big left push */
+  }
+
+  .nav-buttons li{
+    display: block;      /* stack buttons */
+    margin: 8px 0;
+  }
+
+  wrapper{
+    height: auto;        /* let it grow */
+    padding-bottom: 30px;
+  }
+
+  .intro p{
+    width: auto;         /* stop forcing 910px */
+    padding: 0 15px;     /* nice side padding */
+  }
+
+  #hero h2{
+    padding-left: 0;
+    text-align: center;
+  }
+
+  footer{
+    width: auto;
+    margin: 0 15px;
+  }
+}
+html{
+  scroll-behavior: smooth;
+}
+
+</style>
+</head>
+
+<body>
+<header>
+  <div class="header-inner"> <img src="mMexlogo.png" alt="Viva Mexico Logo" class="logo">
+    <div class="header-text">
+      <h1>Viva Mexico</h1>
+      <p>The Best Authentic Mexican Restaurant</p>
+    </div>
+  </div>
+</header>
+<wrapper>
+  <nav>
+  <ul class="nav-buttons">
+  <li><a href="#">Home</a></li>
+  <li><a href="#favorites">Our Favorites</a></li>
+  <li><a href="#events">Events</a></li>
+  <li><a href="#celebrating">Our Story</a></li>
+  <li><a href="#location">Find Us &amp; Hours</a></li>
+</ul>
+	</nav>
+  <div id="hero">
+    <h2 id="celebrating">Celebrating 25 years</h2>
+  </div>
+  <article class="intro">
+    <p>For 25 years, Viva Mexico has proudly served authentic Mexican cuisine rooted in tradition, family, and flavor. What began as a dream to share the true taste of Mexico has grown into a beloved gathering place where recipes passed down through generations come to life. Every dish we prepare reflects our passion for fresh ingredients, bold spices, and time-honored cooking methods that celebrate Mexico’s rich culinary heritage.
+      Today, Viva Mexico stands as more than a restaurant—it is a celebration of culture, community, and authenticity. From our kitchen to your table, we are honored to continue serving the flavors that have brought families and friends together for a quarter of a century.</p>
+  </article>
+<section class="menu-item" id="favorites">
+
+
+    <h2>Our Favorites</h2>
+    <div class="menu-images">
+      <div class="menu-card"> <img src="jed-owen-oxVoZhxnHyw-unsplash.jpg" alt="Chiles Rellenos">
+        <h3>Chiles Rellenos</h3>
+        <p>Roasted poblano pepper filled with melted cheese, lightly battered and fried, served with traditional tomato sauce.</p>
+      </div>
+      <div class="menu-card"> <img src="jed-owen-sr0kF2fENPo-unsplash.jpg" alt="Fiesta Bowl">
+        <h3>Fiesta Bowl</h3>
+        <p>Shredded chicken over Mexican rice, topped with salsa, crema, crispy tortilla strips, served with fresh guacamole &amp; chips.</p>
+      </div>
+      <div class="menu-card"> <img src="mole.jpg" alt="Chicken Mole">
+        <h3>Chicken Mole</h3>
+        <p>Tender chicken simmered in rich, traditional mole sauce, served with rice and lime.</p>
+      </div>
+    </div>
+  </section>
+<section class="menu-item" id="events">
+
+    <h2>Events</h2>
+    <div class="menu-images"> 
+      <!-- ONE BIG EVENTS BOX -->
+      <div class="menu-card events-box">
+        <div class="events-inner">
+          <div class="event-item"> <img src="tacot.jpg" alt="Taco Tuesdays">
+            <h3>Taco Tuesdays</h3>
+            <p>$3 tacos &#42; All day</p>
+          </div>
+          <div class="event-item"> <img src="happyh.jpg" alt="Happy Hour">
+            <h3>Happy Hour</h3>
+            <p>Mon&#45;Fri &#42; 4 PM &#45; 7 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="location" class="info-box">
+    <h2>Find Us &amp; Hours</h2>
+    <div class="hours">
+      <p><strong>Monday &#45;Thursday:</strong> 11:00 AM &#45;9:00 PM</p>
+      <p><strong>Friday &#45;Saturday:</strong> 11:00 AM&#45;10:00 PM</p>
+      <p><strong>Sunday:</strong> 12:00 PM &#45;8:00 PM</p>
+      <div class="social-media">
+        <h3>Follow Us</h3>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a> <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a> <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a> </div>
+      <p><strong>Address:</strong> 123 Oceanview Blvd, Clearwater Beach, FL</p>
+      <p><strong>Phone:</strong> (555) 987-6543</p>
+    </div>
+    <div class="map-container">
+      <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509574!2d-122.41941538468136!3d37.77492927975973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809caaaaaaab%3A0xbdfbc1e0e0fccc59!2sBlueWave%20Seafood%20Grill!5e0!3m2!1sen!2sus!4v1730700000000!5m2!1sen!2sus" 
+      width="300" 
+      height="100" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade"> </iframe>
+    </div>
+  </div>
+  <footer>
+    <p>© 2026, Angelina B Villalobos. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+  </footer>
+</wrapper>
+</body>
+</html>
