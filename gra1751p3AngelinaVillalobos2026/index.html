@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://use.typekit.net/uoc0hht.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luzia Performing Arts Theater | BettyVillalobos2026</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background: #ccc;
+}
+.wrapper {
+    width: 1366px;
+    margin: 0 auto;
+    background: #fff;
+}
+section {
+    height: 1024px;
+    position: relative;
+    overflow: hidden;
+}
+nav {
+    background: rgba(252,252,252,0.92);
+    backdrop-filter: blur(6px);
+}
+nav ul {
+    margin: 0;
+    padding: 0 40px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+nav ul li {
+    padding: 1px 20px;
+    font-size: 30px;
+    font-family: "trajan-sans-pro", sans-serif;
+    font-weight: 800;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #6F3009;
+    display: block;
+    padding: 10px 6px;
+}
+nav ul li:hover {
+    background: #999;
+}
+nav ul li.logo:hover {
+    background: none;
+}
+nav ul li.logo img {
+    height: 90px;
+    transform: scale(1.35);
+    transform-origin: left center;
+}
+.logo {
+    margin-right: auto;
+}
+.menu-right {
+    display: flex;
+    gap: 50px;
+    margin-left: 60px;
+}
+h1 {
+    font-family: "trajan-sans-pro", sans-serif;
+    padding: 30px;
+    margin: 0;
+    color: #fff;
+    font-size: 40px;
+}
+#home .hero-text {
+    position: absolute;
+    top: 250px;   
+    left: 60px;
+    max-width: 600px;
+}
+
+
+.hero-text h2 {
+    margin: 0 0 10px 0;
+    font-family: "trajan-sans-pro", sans-serif;
+    font-size: 34px;
+     color: #ffffff;
+	}
+.hero-text p {
+ color: #ffffff;
+    text-shadow: 0 8px 25px rgba(0,0,0,0.6);
+font-family: "fiona", sans-serif;
+	font-size: 20px
+  
+}
+.hero-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+}
+.btn {
+    padding: 10px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: "trajan-sans-pro", sans-serif;
+    background: rgba(197,125,64,.60);
+    color: #fff;
+    font-size: 14px;
+}
+.btn:hover {
+    background: #000;
+}
+.ticket-cta {
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    opacity: 0.55;
+}
+.buy-btn {
+    padding: 16px 30px;
+    font-family: "trajan-sans-pro", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    background: rgba(197,125,64,.90);
+    color: #ffffff;
+    border-radius: 50px;
+    transition: .3s ease;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+.buy-btn:hover {
+    background: #000;
+    transform: translateY(-3px);
+}
+.ticket-cta img {
+    width: 220px;
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+}
+#home {
+    background: url(national-center_optimized.jpg) center/cover no-repeat;
+}
+#media {
+    background: url(Beije-china1.jpeg) center/cover no-repeat;
+}
+#directions {
+    background: url(egg.jpg) center/cover no-repeat;
+}
+#calendar {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    width: 300px;
+    height: 270px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    opacity: .75;
+    border: 0;
+}
+	.media-text {
+    position:absolute;
+    top:150px;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    max-width:700px;
+    color:#ffffff;
+    text-shadow:0 6px 25px rgba(0,0,0,0.6);
+}
+
+.media-text h1{
+    font-family:"trajan-sans-pro", sans-serif;
+    font-size:32px;
+    letter-spacing:2px;
+    margin-bottom: 10px;
+}
+
+.media-text p{
+  
+font-family: "fiona", sans-serif;
+    font-size:20px;
+   
+}
+
+#media iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+}
+.video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 350px;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    border: none;
+}
+.media-gallery {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    padding: 15px 25px;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(8px);
+    border-radius: 30px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+}
+.media-gallery img {
+    width: 200px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 15px;
+    opacity: 0.75;
+    transition: .4s ease;
+    cursor: pointer;
+}
+.media-gallery img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(197,125,64,.8);
+}
+.center-title {
+    text-align: center;
+    width: 100%;
+    padding-top: 60px;
+    font-family: "trajan-sans-pro", sans-serif;
+    letter-spacing: 3px;
+    font-size: 42px;
+    color: rgba(245,240,240,1.00);
+    text-shadow: 0 4px 20px #ffff;
+}
+	.directions-text{
+    position:absolute;
+    top:160px;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    max-width:700px;
+    color:#ffffff;
+    text-shadow:0 6px 25px rgba(0,0,0,0.6);
+}
+
+.directions-text h1{
+    font-family:"trajan-sans-pro", sans-serif;
+    font-size:32px;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.directions-text p{
+    
+font-family: "fiona", sans-serif;
+    font-size:20px;
+   
+}
+
+.map-rect {
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    width: 350px;
+    height: 280px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+    opacity: 0.9;
+}
+.contact-info {
+    position: absolute;
+    top: 260px;
+    left: 60px;
+    max-width: 420px;
+    padding: 24px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(6px);
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+.contact-left {
+    position: absolute;
+    bottom: 80px;
+    left: 60px;
+    max-width: 420px;
+    color: #ffffff;
+}
+.contact-left h2 {
+    margin: 0 0 12px 0;
+    font-family: "trajan-sans-pro", sans-serif;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+.contact-left p {
+    font-family: "fiona", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+.social-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+}
+.social-icons a:nth-child(1) {
+    color: #E1306C;
+}
+.social-icons a:nth-child(2) {
+    color: #1877F2;
+}
+.social-icons a:nth-child(3) {
+    color: #FF0000;
+}
+.social-icons a {
+    transition: .3s ease;
+}
+.social-icons a:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+.social-icons a {
+    transition: .3s ease;
+}
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #f0d7a1;
+}
+.address, .contact-details {
+    font-family: "fiona", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+.social-icons {
+    display: flex;
+    gap: 18px;
+    font-size: 22px;
+}
+.social-icons a {
+    color: #6F3009;
+    transition: .3s;
+}
+.social-icons a:hover {
+    color: #000;
+    transform: scale(1.15);
+}
+footer {
+    padding: 18px;
+    font-family: Arial;
+    font-size: 13px;
+    background-color: rgba(248,212,174,0.67);
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+  <section id="home">
+    <nav>
+      <ul>
+        <li class="logo"><a href="#home"><img src="logo12.png" alt="Mystère Logo"></a></li>
+        <div class="menu-right">
+          <li><a href="#media">Media</a></li>
+          <li><a href="#directions">Directions</a></li>
+        </div>
+      </ul>
+    </nav>
+    <h1>Luzia - National Centre Performing Arts </h1>
+    <div class="hero-text">
+      <h2>Where Wonder Takes the Stage</h2>
+      <p>A high-energy live spectacle of acrobatics, rhythm, and playful characters—built to surprise and leave you breathless.</p>
+      <div class="hero-actions"> <a class="btn" href="#media">Watch Teaser</a> <a class="btn" href="#directions">Plan Your Visit</a> </div>
+    </div>
+    <iframe id="calendar"
+src="https://calendar.google.com/calendar/embed?src=c_a54bf2ec46288dd070671237aad9babbd429b3afe81ed6799622d999804599e6%40group.calendar.google.com&ctz=America%2FNew_York"> </iframe>
+    <div class="ticket-cta"> <a href="#" class="buy-btn">Buy Tickets</a> <img src="tickets.jpeg" alt="Luzia Circus Show Tickets"> </div>
+  </section>
+  <section id="media">
+    <nav>
+      <ul>
+        <li class="logo"><a href="#home"><img src="logo12.png" alt="Mystère Logo"></a></li>
+        <div class="menu-right">
+          <li><a href="#media">Media</a></li>
+          <li><a href="#directions">Directions</a></li>
+        </div>
+      </ul>
+    </nav>
+    
+	  <div class="media-text">
+   <h1>Experience the Magic</h1>
+   <p>Step inside the world of Luzia — where gravity bends, colors ignite, and imagination takes center stage.</p>
+</div>
+
+    <div class="video-container">
+      <iframe 
+    src="https://www.youtube.com/embed/qQeqrig6Z5E"
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen> </iframe>
+    </div>
+    <div class="media-gallery"> <img src="media4.jpeg" alt="Luzia Performance 4"> <img src="media1.jpeg" alt="Luzia Performance 1"> <img src="media2.jpeg" alt="Luzia Performance 2"> <img src="media3.jpeg" alt="Luzia Performance 3"> <img src="media5.jpeg" alt="Luzia Performance 5"> <img src="media6.jpeg" alt="Luzia Performance 6"> </div>
+  </section>
+  <section id="directions">
+    <nav>
+      <ul>
+        <li class="logo"><a href="#home"><img src="logo12.png" alt="Luzia Logo"></a></li>
+        <div class="menu-right">
+          <li><a href="#media">Media</a></li>
+          <li><a href="#directions">Directions</a></li>
+        </div>
+      </ul>
+    </nav>
+   
+	  <div class="directions-text">
+   <h1>Step Into the Spectacle</h1>
+   <p>Located at the iconic National Centre for the Performing Arts, Luzia awaits in the heart of Beijing. Arrive early to enjoy the atmosphere before stepping into an unforgettable evening of wonder.</p>
+</div>
+
+    <div class="contact-left">
+      <h2>Visit Luzia</h2>
+      <p> National Centre for the Performing Arts<br>
+        2 West Chang'an Avenue<br>
+        Xicheng District, Beijing 100031 </p>
+      <p> 📞 +1 (555) 123-4567<br>
+        ✉ info@mysteretheater.com </p>
+      <div class="social-icons"> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-youtube"></i></a> </div>
+    </div>
+    <iframe class="map-rect"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.635207952741!2d116.38709627488204!3d39.90479897152648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f0528e22e7a273%3A0x8b74ec5b2f1aaa87!2sNational%20Centre%20for%20the%20Performing%20Arts!5e0!3m2!1sen!2sus!4v1770956877700!5m2!1sen!2sus"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"> </iframe>
+  </section>
+  <footer>© 2026, Angelina B Villalobos. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category. </footer>
+</div>
+</body>
+</html>
