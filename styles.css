@@ -1,0 +1,186 @@
+@charset "UTF-8";
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F4BBD3;
+}
+wrapper {
+    width: 1366px;
+    margin: 0 auto;
+    display: block;
+    background-color: rgba(235,55,136,1.00);
+}
+header {
+    height: 150px;
+    background-color: rgba(196,11,94,1.00);
+}
+footer {
+    padding: 16px;
+    font-size: 12px;
+    color: #f5b1cf;
+    font-weight: bold;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: rgba(rgba(196,11,94,1.00));
+}
+nav {
+    background-image: url(images/Blogs.jpg);
+}
+#tour {
+    background-image: url(images/Tour.jpg);
+	 min-height: 700px;      
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#tour{
+  position: relative;
+}
+
+.ticket-btn{
+  position: absolute;
+  bottom: 80px;
+  right: 80px;
+  padding: 18px 35px;
+  background-color: #c50b5e;
+  color: white;
+  font-size: 22px;
+  font-family: Krungthep;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.ticket-btn:hover{
+  background-color: #760426;
+  transform: scale(1.05);
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    opacity: 0.5;
+    background-color: #c50b5e;
+}
+ul a li {
+    padding: 16px 30px;
+    display: inline-block;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: Krungthep;
+}
+ul a li:hover  {
+    background-color: #760426;
+}
+
+#home {
+    
+    background-image: url(images/home.jpg);
+	  min-height: 700px;      
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   
+}
+#MusicStore  {
+    min-height: 700px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(images/Musicstore.jpg);
+}
+#News {
+    min-height: 700px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(images/NEWS.jpg);
+}
+
+header {
+    font-family: Krungthep;
+    color: #f5b1cf;
+    font-size: 90px;
+    padding-left: 480px;
+    padding-top: 55px;
+    font-weight: bold;
+}
+#Merch {
+    background-image: url(images/MERCHANDISE.jpg);
+	  min-height: 700px;      
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}   
+ #Merch{
+  position: relative;
+}
+
+.merch-btn{
+  position: absolute;
+  bottom: 40px;
+  left: 575px;
+  padding: 16px 22px;
+  background-color: #c50b5e;
+  color: white;
+  font-size: 20px;
+  font-family: Krungthep;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.merch-btn:hover{
+  background-color: #760426;
+  transform: scale(1.05);
+}
+#Videos {
+    background-image: url(images/KGvideo.jpg);
+    min-height: 900px;   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: flex-end;   
+    align-items: center;         
+    padding-right: 50px;
+}
+#Blogs {
+    background-image: url(images/Blogs.jpg);
+	 min-height: 700px;      
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.video-box {
+    display: flex;
+    flex-direction: column;  
+    gap: 60px;               
+}
+
+.video-box iframe {
+    width: 600px;
+    height: 350px;
+    border-radius: 12px;
+}
+#gallery {
+    background-image: url(images/GALLERY.jpg);
+		 min-height: 700px;      
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#mailings {
+    background-image: url(images/Mailings.jpg);
+		 min-height: 700px;      
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#Privacy {
+    background-image: url(images/PRIVACY.jpg);
+	 min-height: 700px;      
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
