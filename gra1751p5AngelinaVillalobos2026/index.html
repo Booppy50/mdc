@@ -134,6 +134,7 @@ nav ul li.logo img {
 
 .switch-buttons {
     margin-top: 18px;
+    margin-bottom: 28px;
 }
 
 .switch-buttons button {
@@ -173,6 +174,65 @@ nav ul li.logo img {
     background-color: #cfc5a3;
 }
 
+.size-section {
+    margin: 25px 0 30px;
+}
+
+.size-section p {
+    margin-bottom: 14px;
+    font-size: 18px;
+    color: #16367a;
+}
+
+.size-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.size-buttons button {
+    width: 58px;
+    height: 50px;
+    border: 2px solid #1E3A8A;
+    background-color: white;
+    color: #1E3A8A;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.size-buttons button:hover {
+    background-color: #dbe7ff;
+    transform: scale(1.05);
+}
+
+.size-buttons button.active-size {
+    background-color: #1E3A8A;
+    color: white;
+    box-shadow: 0 6px 16px rgba(30,58,138,0.22);
+}
+
+.cart-btn {
+    margin-top: 10px;
+    padding: 16px 34px;
+    background-color: #1E3A8A;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.cart-btn:hover {
+    background-color: #3B5BB5;
+    transform: scale(1.05);
+}
+
 footer {
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -209,6 +269,7 @@ const productData = {
 
 let currentColor = "green";
 let showingBack = false;
+let currentSize = "";
 
 function setColor(colorKey) {
     currentColor = colorKey;
@@ -224,6 +285,17 @@ function setColor(colorKey) {
     document.getElementById(colorKey + "Btn").classList.add("active-swatch");
 }
 
+function setSize(size) {
+    currentSize = size;
+    document.getElementById("selectedSize").textContent = size;
+
+    document.querySelectorAll(".size-buttons button").forEach(btn => {
+        btn.classList.remove("active-size");
+    });
+
+    document.getElementById(size + "Btn").classList.add("active-size");
+}
+
 function showBack() {
     document.getElementById("mainImage").src = productData[currentColor].back;
     showingBack = true;
@@ -232,6 +304,14 @@ function showBack() {
 function showFront() {
     document.getElementById("mainImage").src = productData[currentColor].front;
     showingBack = false;
+}
+
+function addToCart() {
+    if (currentSize === "") {
+        alert("Please select a size first.");
+    } else {
+        alert("Added to cart: " + productData[currentColor].name + " / Size " + currentSize.toUpperCase());
+    }
 }
 
 window.onload = function() {
@@ -290,6 +370,18 @@ window.onload = function() {
                 <button id="blueBtn" class="bluebtn" onclick="setColor('blue')" title="Blue"></button>
                 <button id="tanBtn" class="tanbtn" onclick="setColor('tan')" title="Tan"></button>
             </div>
+
+            <div class="size-section">
+                <p><strong>Size: <span id="selectedSize">Select</span></strong></p>
+                <div class="size-buttons">
+                    <button id="sBtn" onclick="setSize('s')">S</button>
+                    <button id="mBtn" onclick="setSize('m')">M</button>
+                    <button id="lBtn" onclick="setSize('l')">L</button>
+                    <button id="xlBtn" onclick="setSize('xl')">XL</button>
+                </div>
+            </div>
+
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
         </div>
     </section>
 
