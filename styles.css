@@ -1,186 +1,130 @@
 @charset "UTF-8";
+
 body {
     padding: 0;
     margin: 0;
-    background-color: #F4BBD3;
+    background: url("nicola-david-raspa-JixCWBf-vzw-unsplash.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: sans-serif;
+    position: relative;
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.4);
+    z-index: 1;
+}
+
 wrapper {
     width: 1366px;
     margin: 0 auto;
     display: block;
-    background-color: rgba(235,55,136,1.00);
+    background-color: rgba(255,255,255,0.08);
+    position: relative;
+    z-index: 2;
 }
+
 header {
-    height: 150px;
-    background-color: rgba(196,11,94,1.00);
-}
-footer {
-    padding: 16px;
-    font-size: 12px;
-    color: #f5b1cf;
-    font-weight: bold;
-    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: rgba(rgba(196,11,94,1.00));
-}
-nav {
-    background-image: url(images/Blogs.jpg);
-}
-#tour {
-    background-image: url(images/Tour.jpg);
-	 min-height: 700px;      
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-#tour{
-  position: relative;
+    height: 100px;
+    border-bottom: 20px solid #000;
+    background-color: rgba(8,51,116,1.00);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0; 
 }
 
-.ticket-btn{
-  position: absolute;
-  bottom: 80px;
-  right: 80px;
-  padding: 18px 35px;
-  background-color: #c50b5e;
-  color: white;
-  font-size: 22px;
-  font-family: Krungthep;
-  text-decoration: none;
-  border-radius: 12px;
-  transition: 0.3s;
+.logo {
+    width: 250px;
+    height: auto;
 }
 
-.ticket-btn:hover{
-  background-color: #760426;
-  transform: scale(1.05);
-}
-nav ul {
-    padding: 0;
+h1, h2, h3 {
     margin: 0;
-    opacity: 0.5;
-    background-color: #c50b5e;
+    text-align: center;
+    color: #003548;
 }
-ul a li {
-    padding: 16px 30px;
+
+section {
+    width: 50%;
     display: inline-block;
-    color: #FFFFFF;
+    margin-right: -4px;
+    padding: 16px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+label {
+    display: block;
+    padding: 16px;
     font-size: 18px;
-    font-family: Krungthep;
-}
-ul a li:hover  {
-    background-color: #760426;
-}
-
-#home {
-    
-    background-image: url(images/home.jpg);
-	  min-height: 700px;      
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-   
-}
-#MusicStore  {
-    min-height: 700px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(images/Musicstore.jpg);
-}
-#News {
-    min-height: 700px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(images/NEWS.jpg);
+    font-weight: 900;
+    color:rgba(5,52,70,1.00);
+  
 }
 
-header {
-    font-family: Krungthep;
-    color: #f5b1cf;
-    font-size: 90px;
-    padding-left: 480px;
-    padding-top: 55px;
-    font-weight: bold;
-}
-#Merch {
-    background-image: url(images/MERCHANDISE.jpg);
-	  min-height: 700px;      
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}   
- #Merch{
-  position: relative;
+input, select {
+    display: block;
+    width: calc(100% - 32px);
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,1);
+    border: 1px solid rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: sans-serif;
+    height: 58px;
 }
 
-.merch-btn{
-  position: absolute;
-  bottom: 40px;
-  left: 575px;
-  padding: 16px 22px;
-  background-color: #c50b5e;
-  color: white;
-  font-size: 20px;
-  font-family: Krungthep;
-  text-decoration: none;
-  border-radius: 12px;
-  transition: 0.3s;
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+input:focus, select:focus {
+    outline: none;
+    border: 1px solid #003479;
+    background-color: rgba(255,255,255,0.95);
 }
 
-.merch-btn:hover{
-  background-color: #760426;
-  transform: scale(1.05);
-}
-#Videos {
-    background-image: url(images/KGvideo.jpg);
-    min-height: 900px;   
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    justify-content: flex-end;   
-    align-items: center;         
-    padding-right: 50px;
-}
-#Blogs {
-    background-image: url(images/Blogs.jpg);
-	 min-height: 700px;      
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.video-box {
-    display: flex;
-    flex-direction: column;  
-    gap: 60px;               
+#tandc_txt {
+    width: auto;
+    margin-left: 16px;
+    margin-top: -24px;
 }
 
-.video-box iframe {
-    width: 600px;
-    height: 350px;
-    border-radius: 12px;
-}
-#gallery {
-    background-image: url(images/GALLERY.jpg);
-		 min-height: 700px;      
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-#mailings {
-    background-image: url(images/Mailings.jpg);
-		 min-height: 700px;      
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-#Privacy {
-    background-image: url(images/PRIVACY.jpg);
-	 min-height: 700px;      
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+#salute {
+    width: 25%;
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
 }
 
+#first {
+    width: 72%;
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+}
+
+#submit_btn {
+    width: 250px;
+    margin: 20px auto;
+    display: block;
+    color: #fff;
+    border-radius: 30px;
+    background-color: rgba(0,52,121,1);
+    font-size: 20px;
+}
+
+footer {
+    padding: 20px 30px;
+    font-size: 12px;
+    color: rgba(247,234,234,1.00);
+    background-color: rgba(44,135,238,.50);
+    margin-top: 50px;
+}
