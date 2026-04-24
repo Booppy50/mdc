@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+body {
+    padding: 0;
+    margin: 0;
+    background: url("nicola-david-raspa-JixCWBf-vzw-unsplash.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: sans-serif;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.4);
+    z-index: 1;
+}
+
+wrapper {
+    width: 1366px;
+    margin: 0 auto;
+    display: block;
+    background-color: rgba(255,255,255,0.08);
+    position: relative;
+    z-index: 2;
+}
+
+header {
+    height: 100px;
+    border-bottom: 20px solid #000;
+    background-color: rgba(8,51,116,1.00);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0; 
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    text-align: center;
+    color: #003548;
+}
+
+section {
+    width: 50%;
+    display: inline-block;
+    margin-right: -4px;
+    padding: 16px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+label {
+    display: block;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 900;
+    color:rgba(5,52,70,1.00);
+  
+}
+
+input, select {
+    display: block;
+    width: calc(100% - 32px);
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,1);
+    border: 1px solid rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: sans-serif;
+    height: 58px;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+input:focus, select:focus {
+    outline: none;
+    border: 1px solid #003479;
+    background-color: rgba(255,255,255,0.95);
+}
+
+#tandc_txt {
+    width: auto;
+    margin-left: 16px;
+    margin-top: -24px;
+}
+
+#salute {
+    width: 25%;
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+}
+
+#first {
+    width: 72%;
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+}
+
+#submit_btn {
+    width: 250px;
+    margin: 20px auto;
+    display: block;
+    color: #fff;
+    border-radius: 30px;
+    background-color: rgba(0,52,121,1);
+    font-size: 20px;
+}
+
+footer {
+    padding: 20px 30px;
+    font-size: 12px;
+    color: rgba(247,234,234,1.00);
+    background-color: rgba(44,135,238,.50);
+    margin-top: 50px;
+}
