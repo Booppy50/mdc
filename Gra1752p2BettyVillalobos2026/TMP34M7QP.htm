@@ -1,0 +1,923 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="https://use.typekit.net/qfq6cfl.css">
+<title>Cat Mood</title>
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #CCC;
+}
+wrapper {
+    width: 1366px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+header h1 {
+    font-size: 140px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+main h2 {
+    color: #234654;
+    font-family: "coyote", sans-serif;
+    font-size: 100px;
+    font-weight: 900;
+    margin: 0;
+    padding: 0 0 0 400px;
+    text-align: left;
+    line-height: 0.8;
+}
+main h2:first-of-type {
+    padding-top: 100px;
+}
+header {
+    height: 150px;
+    background-color: #287B7A;
+    margin: 0;
+    padding: 0;
+    color: #c8895e;
+    font-family: "coyote", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .paw {
+    width: 85px;
+    height: 85px;
+    fill: #c8895e;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+main {
+    margin: 0;
+    padding: 0;
+    background-color: #F6DCCB;
+    line-height: 0;
+}
+main h1 {
+    color: #234654;
+    font-family: "coyote", sans-serif;
+    font-size: 150px;
+    font-weight: 900;
+    margin: 0;
+    padding: 35px 0 5px 85px;
+    text-align: left;
+    line-height: 1.1;
+}
+main svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: -6px;
+    padding: 0;
+}
+.mood-description {
+    font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+    font-size: 20px;
+    font-weight: 400;
+    fill: #153b45;
+}
+footer {
+    min-height: 80px;
+    background-color: #287B7A;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 20px 60px;
+    box-sizing: border-box;
+    clear: both;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+}
+#txt_sleepy, #txt_playful, #txt_hungry, #txt_curious {
+    display: none;
+}
+#ball_playful, #bowl_hungry, #butterfly_curious {
+    display: none;
+}
+#segment_sleepy, #segment_playful, #segment_hungry, #segment_curious {
+    cursor: pointer;
+}
+#sleepy_sitting {
+    display: inline;
+}
+#sleepy_lying {
+    display: none;
+}
+#segment_sleepy:hover #sleepy_sitting {
+    display: none;
+}
+#segment_sleepy:hover #sleepy_lying, #segment_sleepy:hover #sleepy_lying.st41 {
+    display: inline;
+}
+#segment_sleepy:hover #sleepy_lying, #segment_playful:hover #shape_playful, #segment_hungry:hover #shape_hungry, #segment_curious:hover #shape_curious {
+    filter: drop-shadow(8px 10px 6px rgba(0,0,0,.35));
+}
+#segment_sleepy:hover #txt_sleepy, #segment_sleepy:hover #txt_sleepy .st40, #segment_playful:hover #txt_playful, #segment_playful:hover #txt_playful .st40, #segment_hungry:hover #txt_hungry, #segment_hungry:hover #txt_hungry .st40, #segment_curious:hover #txt_curious, #segment_curious:hover #txt_curious .st40 {
+    display: inline;
+}
+#segment_playful:hover #ball_playful, #segment_playful:hover #ball_playful.st41 {
+    display: inline;
+}
+#segment_hungry:hover #bowl_hungry, #segment_hungry:hover #bowl_hungry.st41 {
+    display: inline;
+}
+#segment_hungry:hover #bowl_hungry .st21 {
+    fill: #153B45;
+}
+#segment_hungry:hover #bowl_hungry .st20 {
+    fill: #E76F51;
+}
+#segment_curious:hover #butterfly_curious, #segment_curious:hover #butterfly_curious.st41 {
+    display: inline;
+}
+#segment_playful:hover #body_playful {
+    fill: #F4A261;
+}
+#segment_playful:hover #head_playful, #segment_playful:hover #ear_left_playful, #segment_playful:hover #ear_right_playful {
+    fill: #E76F51;
+}
+#segment_hungry:hover #body_hungry {
+    fill: #287B7A;
+}
+#segment_hungry:hover #head_hungry, #segment_hungry:hover #ear_left_hungry, #segment_hungry:hover #ear_right_hungry {
+    fill: #153B45;
+}
+#segment_curious:hover #body_curious {
+    fill: #F4A261;
+}
+#segment_curious:hover #head_curious {
+    fill: #F6DCCB;
+}
+</style>
+</head>
+
+<body>
+<wrapper>
+  <header>
+    <h1> CAT MOODS
+      <svg class="paw" viewBox="0 0 100 100" aria-hidden="true">
+        <ellipse cx="50" cy="65" rx="28" ry="23"/>
+        <circle cx="20" cy="42" r="11"/>
+        <circle cx="40" cy="25" r="11"/>
+        <circle cx="62" cy="25" r="11"/>
+        <circle cx="82" cy="42" r="11"/>
+      </svg>
+    </h1>
+  </header>
+  <main>
+    <h1>Different Cats. Brighter Days.</h1>
+    <h2>Every cat has a mood</h2>
+    <h2>Hover over each cat</h2>
+    <h2>to find out more!</h2>
+    <svg id="Layer_1"
+     xmlns="http://www.w3.org/2000/svg"
+     version="1.1"
+     viewBox="0 0 1366 1024">
+      <defs>
+        <style>
+
+.st0 {
+    stroke: #777c83;
+    stroke-width: 24px;
+}
+
+.st0,
+.st1,
+.st2,
+.st3,
+.st4,
+.st5,
+.st6,
+.st7,
+.st8 {
+    fill: none;
+}
+
+.st0,
+.st1,
+.st2,
+.st7,
+.st8 {
+    stroke-linecap: round;
+}
+
+.st9 {
+    fill: #d94c4c;
+}
+
+.st10 {
+    fill: #c87979;
+}
+
+.st11 {
+    fill: #338d89;
+}
+
+.st12 {
+    fill: #f2a0a0;
+}
+
+.st13 {
+    fill: #e76f51;
+}
+
+.st14 {
+    fill: #2d7896;
+}
+
+.st1 {
+    stroke-width: 2px;
+}
+
+.st1,
+.st2,
+.st4 {
+    stroke: #153b45;
+}
+
+.st15 {
+    fill: #ffd166;
+}
+
+.st16 {
+    fill: #397d54;
+}
+
+.st17 {
+    fill: #f6dccb;
+}
+
+.st18 {
+    fill: #d9e65c;
+}
+
+.st19 {
+    fill: #e98a2e;
+}
+
+.st20 {
+    fill: #3cb2a5;
+}
+
+.st21 {
+    fill: #2a9d8f;
+}
+
+.st22 {
+    fill: #c8895e;
+}
+
+.st23 {
+    fill: #282e31;
+}
+
+.st2,
+.st5 {
+    stroke-width: 5px;
+}
+
+.st24 {
+    fill: #b66d45;
+}
+
+.st3 {
+    stroke: #f8f4e8;
+    stroke-width: 14px;
+}
+
+.st25 {
+    fill: #5a413b;
+}
+
+.st26 {
+    fill: #f4a261;
+}
+
+.st27,
+.st28 {
+    fill: #153b45;
+}
+
+.st29 {
+    fill: #9dddea;
+}
+
+.st30 {
+    fill: #e98c8c;
+}
+
+.st4 {
+    stroke-width: 3px;
+}
+
+.st31 {
+    fill: #fff;
+}
+
+.st32 {
+    fill: #287b7a;
+}
+
+.st33 {
+    fill: #f8efe2;
+}
+
+.st34 {
+    fill: #8a562e;
+}
+
+.st35 {
+    fill: #eadacb;
+}
+
+.st36 {
+    fill: #8b9096;
+}
+
+.st5 {
+    stroke: #a93434;
+}
+
+.st37 {
+    fill: #fff0db;
+}
+
+.st38 {
+    fill: #e58c87;
+}
+
+.st39 {
+    fill: #f7e7ce;
+}
+
+.st40,
+.st28 {
+    isolation: isolate;
+}
+
+
+
+
+.st40,
+.st41 {
+    display: none;
+}
+
+.st6 {
+    stroke: #e7c9a9;
+    stroke-width: 18px;
+}
+
+.st42 {
+    fill: #4d8b5c;
+}
+
+.st43 {
+    fill: #3b8f95;
+}
+
+.st28 {
+    font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+    font-size: 45px;
+    font-weight: 700;
+}
+.st44 {
+    fill: #242a2d;
+}
+
+.st45 {
+    fill: #f3e5d6;
+}
+
+.st46 {
+    fill: #2f6b49;
+}
+
+.st7 {
+    stroke: #6b4a43;
+}
+
+.st7,
+.st8 {
+    stroke-width: 25px;
+}
+
+.st47 {
+    fill: #777c83;
+}
+
+.st8 {
+    stroke: #e98a2e;
+}
+
+.st48 {
+    fill: #6b4a43;
+}
+
+.st49 {
+    fill: #f29a38;
+}
+
+</style>
+      </defs>
+      <rect id="wall"
+      class="st17"
+      width="1366"
+      height="600"/>
+      <rect id="floor"
+      class="st22"
+      y="600"
+      width="1366"
+      height="424"/>
+      <g id="room">
+        <rect id="window"
+      class="st29"
+      x="965"
+      y="75"
+      width="300"
+      height="235"
+      rx="8"
+      ry="8"/>
+        <line class="st3"
+      x1="1115"
+      y1="75"
+      x2="1115"
+      y2="310"/>
+        <line class="st3"
+      x1="965"
+      y1="190"
+      x2="1265"
+      y2="190"/>
+        <circle id="sun"
+        class="st15"
+        cx="1200"
+        cy="130"
+        r="38"/>
+        <rect id="sofa_back"
+      class="st32"
+      x="360"
+      y="235"
+      width="590"
+      height="255"
+      rx="65"
+      ry="65"/>
+        <rect id="sofa_seat"
+      class="st11"
+      x="405"
+      y="405"
+      width="500"
+      height="125"
+      rx="35"
+      ry="35"/>
+        <rect id="sofa_arm_left"
+      class="st32"
+      x="320"
+      y="355"
+      width="105"
+      height="180"
+      rx="42"
+      ry="42"/>
+        <rect id="sofa_arm_right"
+      class="st32"
+      x="893"
+      y="348"
+      width="105"
+      height="180"
+      rx="42"
+      ry="42"/>
+        <rect id="pillow_orange"
+      class="st26"
+      x="425"
+      y="300"
+      width="125"
+      height="105"
+      rx="18"
+      ry="18"/>
+        <rect id="pillow_coral"
+      class="st13"
+      x="565"
+      y="320"
+      width="135"
+      height="90"
+      rx="18"
+      ry="18"/>
+        <ellipse id="rug"
+         class="st39"
+         cx="690"
+         cy="625"
+         rx="590"
+         ry="105"/>
+        <ellipse class="st6"
+         cx="690"
+         cy="625"
+         rx="500"
+         ry="72"/>
+        <g id="plant">
+          <rect class="st24"
+      x="1120"
+      y="450"
+      width="95"
+      height="95"
+      rx="10"
+      ry="10"/>
+          <ellipse class="st16"
+         cx="1160"
+         cy="410"
+         rx="30"
+         ry="75"
+         transform="translate(-56.7 592.58) rotate(-28)"/>
+          <ellipse class="st46"
+         cx="1200"
+         cy="405"
+         rx="78"
+         ry="30"
+         transform="translate(249.2597 1241.7305) rotate(-60)"/>
+          <ellipse class="st42"
+         cx="1135"
+         cy="390"
+         rx="25"
+         ry="65"
+         transform="translate(106.6787 1008.7733) rotate(-50)"/>
+        </g>
+      </g>
+      <g id="segment_sleepy">
+        <g id="bed_sleepy">
+          <ellipse class="st43"
+         cx="225"
+         cy="615"
+         rx="150"
+         ry="72"/>
+          <ellipse class="st37"
+         cx="225"
+         cy="600"
+         rx="130"
+         ry="54"/>
+        </g>
+        <g id="sleepy_sitting">
+          <ellipse id="body_sleepy_sitting"
+         class="st47"
+         cx="225"
+         cy="565"
+         rx="60"
+         ry="92"/>
+          <path class="st33"
+      d="M200,540c5,35,8,70,25,95,
+         17-25,20-60,25-95-15,10-35,10-50,0Z"/>
+          <circle id="head_sleepy_sitting"
+        class="st36"
+        cx="225"
+        cy="490"
+        r="55"/>
+          <polygon class="st36"
+         points="180 465 195 415 218 465 180 465"/>
+          <polygon class="st36"
+         points="232 465 258 415 270 470 232 465"/>
+          <polygon class="st12"
+         points="191 452 197 430 209 458 191 452"/>
+          <polygon class="st12"
+         points="244 455 256 430 261 462 244 455"/>
+          <ellipse class="st27"
+         cx="205"
+         cy="492"
+         rx="8"
+         ry="11"/>
+          <ellipse class="st27"
+         cx="245"
+         cy="492"
+         rx="8"
+         ry="11"/>
+          <circle class="st31"
+        cx="208"
+        cy="489"
+        r="2.5"/>
+          <circle class="st31"
+        cx="248"
+        cy="489"
+        r="2.5"/>
+          <ellipse class="st38"
+         cx="225"
+         cy="515"
+         rx="7"
+         ry="5"/>
+          <path class="st1"
+      d="M225,520
+         c-5,6-10,6-14,2
+         M225,520
+         c5,6,10,6,14,2"/>
+          <ellipse class="st36"
+         cx="205"
+         cy="615"
+         rx="17"
+         ry="42"/>
+          <ellipse class="st36"
+         cx="245"
+         cy="615"
+         rx="17"
+         ry="42"/>
+          <ellipse class="st47"
+         cx="205"
+         cy="638"
+         rx="23"
+         ry="12"/>
+          <ellipse class="st47"
+         cx="245"
+         cy="638"
+         rx="23"
+         ry="12"/>
+          <path class="st0"
+      d="M275,600
+         c45,10,45,45,5,50
+         -20,2-28-5-25-15"/>
+        </g>
+        <g id="sleepy_lying" class="st41">
+          <ellipse id="body_sleepy_lying"
+         class="st47"
+         cx="245"
+         cy="590"
+         rx="105"
+         ry="53"/>
+          <circle id="head_sleepy_lying"
+        class="st36"
+        cx="170"
+        cy="570"
+        r="52"/>
+          <polygon class="st36"
+         points="130 545 145 500 168 545 130 545"/>
+          <polygon class="st36"
+         points="175 540 202 500 212 552 175 540"/>
+          <polygon class="st12"
+         points="141 532 148 513 158 538 141 532"/>
+          <polygon class="st12"
+         points="187 533 199 514 203 543 187 533"/>
+          <path class="st2"
+      d="M145,570
+         c8,8,17,8,25,0
+         M180,570
+         c8,8,17,8,25,0"/>
+          <ellipse class="st38"
+         cx="175"
+         cy="590"
+         rx="7"
+         ry="5"/>
+          <ellipse class="st36"
+         cx="170"
+         cy="620"
+         rx="38"
+         ry="15"/>
+          <ellipse class="st36"
+         cx="215"
+         cy="620"
+         rx="38"
+         ry="15"/>
+          <path class="st0"
+      d="M315,595
+         c40,10,45,30,10,40"/>
+        </g>
+        <g id="txt_sleepy" class="st40">
+          <g class="st40">
+            <text class="st28" transform="translate(150 745)">
+              <tspan x="0" y="0">Sleepy</tspan>
+              <tspan class="mood-description" x="0" dy="28">Some cats dream</tspan>
+              <tspan class="mood-description" x="0" dy="28">bigger.</tspan>
+            </text>
+          </g>
+        </g>
+      </g>
+      <g id="segment_playful">
+        <g id="shape_playful">
+          <ellipse id="body_playful"
+         class="st19"
+         cx="525"
+         cy="590"
+         rx="85"
+         ry="72"/>
+          <circle id="head_playful"
+        class="st49"
+        cx="555"
+        cy="535"
+        r="58"/>
+          <polygon id="ear_left_playful"
+         class="st49"
+         points="510 510 522 462 548 510 510 510"/>
+          <polygon id="ear_right_playful"
+         class="st49"
+         points="560 505 590 462 600 520 560 505"/>
+          <circle class="st27"
+        cx="535"
+        cy="535"
+        r="7"/>
+          <circle class="st27"
+        cx="575"
+        cy="535"
+        r="7"/>
+          <ellipse class="st13"
+         cx="555"
+         cy="555"
+         rx="7"
+         ry="5"/>
+          <path id="tail_playful"
+      class="st8"
+      d="M465,585
+         c-36.67-36.67-43.33-70-20-100"/>
+          <g id="ball_playful" class="st41">
+            <circle class="st9"
+        cx="650"
+        cy="640"
+        r="38"/>
+            <path class="st5"
+      d="M620,625
+         c20,16.67,40,16.67,60,0
+         M620,650
+         c20-16.67,40-16.67,60,0"/>
+          </g>
+        </g>
+        <g id="txt_playful" class="st40">
+          <g class="st40">
+            <text class="st28" transform="translate(470 745)">
+              <tspan x="0" y="0">Playful</tspan>
+              <tspan class="mood-description" x="0" dy="28">Ready to play!</tspan>
+            </text>
+          </g>
+        </g>
+      </g>
+      <g id="segment_hungry">
+        <g id="shape_hungry">
+          <ellipse id="body_hungry"
+         class="st44"
+         cx="820"
+         cy="585"
+         rx="78"
+         ry="92"/>
+          <circle id="head_hungry"
+        class="st23"
+        cx="820"
+        cy="515"
+        r="58"/>
+          <polygon id="ear_left_hungry"
+         class="st23"
+         points="775 490 790 445 812 495 775 490"/>
+          <polygon id="ear_right_hungry"
+         class="st23"
+         points="830 490 858 445 868 500 830 490"/>
+          <path class="st33"
+      d="M790,530
+         c20,16.67,40,16.67,60,0
+         l-5,40
+         c-16.67,13.33-33.33,13.33-50,0
+         l-5-40Z"/>
+          <circle class="st18"
+        cx="800"
+        cy="515"
+        r="7"/>
+          <circle class="st18"
+        cx="840"
+        cy="515"
+        r="7"/>
+          <ellipse class="st30"
+         cx="820"
+         cy="542"
+         rx="7"
+         ry="5"/>
+          <g id="bowl_hungry" class="st41">
+            <path class="st21"
+      d="M720,645h200
+         c-13.33,46.67-46.67,70-100,70
+         s-86.67-23.33-100-70Z"/>
+            <ellipse class="st20"
+         cx="820"
+         cy="645"
+         rx="100"
+         ry="20"/>
+            <g id="food_hungry">
+              <circle class="st34"
+        cx="775"
+        cy="640"
+        r="10"/>
+              <circle class="st34"
+        cx="800"
+        cy="635"
+        r="10"/>
+              <circle class="st34"
+        cx="825"
+        cy="641"
+        r="10"/>
+              <circle class="st34"
+        cx="850"
+        cy="635"
+        r="10"/>
+              <circle class="st34"
+        cx="875"
+        cy="642"
+        r="10"/>
+            </g>
+          </g>
+        </g>
+        <g id="txt_hungry" class="st40">
+          <g class="st40">
+            <text class="st28" transform="translate(760 770)">
+              <tspan x="0" y="0">Hungry</tspan>
+              <tspan class="mood-description" x="0" dy="28">Good food.</tspan>
+              <tspan class="mood-description" x="0" dy="28">Good mood.</tspan>
+            </text>
+          </g>
+        </g>
+      </g>
+      <g id="segment_curious">
+        <g id="shape_curious">
+          <ellipse id="body_curious"
+         class="st35"
+         cx="1100"
+         cy="580"
+         rx="78"
+         ry="100"/>
+          <circle id="head_curious"
+        class="st45"
+        cx="1100"
+        cy="500"
+        r="58"/>
+          <polygon id="ear_left_curious"
+         class="st25"
+         points="1055 475 1070 430 1092 480 1055 475"/>
+          <polygon id="ear_right_curious"
+         class="st25"
+         points="1110 475 1138 430 1148 488 1110 475"/>
+          <ellipse class="st48"
+         cx="1065"
+         cy="500"
+         rx="18"
+         ry="28"/>
+          <ellipse class="st48"
+         cx="1135"
+         cy="500"
+         rx="18"
+         ry="28"/>
+          <circle class="st14"
+        cx="1080"
+        cy="505"
+        r="7"/>
+          <circle class="st14"
+        cx="1120"
+        cy="505"
+        r="7"/>
+          <ellipse class="st10"
+         cx="1100"
+         cy="530"
+         rx="7"
+         ry="5"/>
+          <path id="tail_curious"
+      class="st7"
+      d="M1160,610
+         c46.67-6.67,63.33-33.33,50-80"/>
+          <g id="butterfly_curious" class="st41">
+            <ellipse class="st26"
+         cx="1240"
+         cy="415"
+         rx="23"
+         ry="34"
+         transform="translate(-13.78 786.29) rotate(-35)"/>
+            <ellipse class="st13"
+         cx="1280"
+         cy="415"
+         rx="34"
+         ry="23"
+         transform="translate(205.8741 1225.4804) rotate(-55)"/>
+            <circle class="st27"
+        cx="1260"
+        cy="422"
+        r="8"/>
+            <path class="st4"
+      d="M1255,410
+         c-6.67-13.33-13.33-21.67-20-25
+         M1265,410
+         c6.67-13.33,13.33-21.67,20-25"/>
+          </g>
+        </g>
+        <g id="txt_curious" class="st40">
+          <g class="st40">
+            <text class="st28" transform="translate(1025 745)">
+              <tspan x="0" y="0">Curious</tspan>
+              <tspan class="mood-description" x="0" dy="28">Curiosity looks</tspan>
+              <tspan class="mood-description" x="0" dy="28">good on you.</tspan>
+            </text>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </main>
+  <footer> © 2026, Betty Villalobos.
+    This is a fictitious web page created solely for the purpose of education and
+    training. All products and people associated with this web page are also
+    fictitious. Any resemblance to real brands, products, or people is purely
+    coincidental. Information provided about the product is also fictitious and
+    should not be construed to be representative of actual products on the market
+    in a similar product category. </footer>
+</wrapper>
+</body>
+</html>
