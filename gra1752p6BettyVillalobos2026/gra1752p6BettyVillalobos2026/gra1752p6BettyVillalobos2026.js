@@ -27,21 +27,21 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_3 = function() {
+(lib.CachedBmp_9 = function() {
 	this.initialize(ss["gra1752p6BettyVillalobos2026_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_2 = function() {
+(lib.CachedBmp_8 = function() {
 	this.initialize(ss["gra1752p6BettyVillalobos2026_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_1 = function() {
+(lib.CachedBmp_7 = function() {
 	this.initialize(ss["gra1752p6BettyVillalobos2026_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
@@ -866,13 +866,13 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_3();
+	this.instance = new lib.CachedBmp_9();
 	this.instance.setTransform(541.6,145.25,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_2();
+	this.instance_1 = new lib.CachedBmp_8();
 	this.instance_1.setTransform(55.4,118.5,0.5,0.5);
 
-	this.instance_2 = new lib.CachedBmp_1();
+	this.instance_2 = new lib.CachedBmp_7();
 	this.instance_2.setTransform(-2,6.1,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
@@ -5874,7 +5874,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/gra1752p6BettyVillalobos2026_atlas_1.png?1795141630926", id:"gra1752p6BettyVillalobos2026_atlas_1"}
+		{src:"images/gra1752p6BettyVillalobos2026_atlas_1.png?1795147736367", id:"gra1752p6BettyVillalobos2026_atlas_1"}
 	],
 	preloads: []
 };
